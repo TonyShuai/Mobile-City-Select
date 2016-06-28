@@ -18,13 +18,18 @@
 	</div>
 	
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/citydata.js" ></script>
 	<script type="text/javascript" src="js/Mobile-City-Select.js" ></script>
 	</body>
 </html>
 
 <script type="text/javascript">
+$(function(){
+	mobileCitySelectinit();
 	$('#citySelect').on('click',function(){
 		$(this).toggleClass('active');
-		alert(111)
+		$("#cityBody").slideToggle();
 	});
+
+})
 </script>
