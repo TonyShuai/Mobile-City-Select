@@ -2,9 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>mobile-city-select</title>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		
+	<!--触发按钮-->
+	<a id="citySelect" class="citySelect" href="javascript:void(0);">城市选择</a>
+	<!--显示省市区选择模块-->
+	<div id="cityBody" class="cityChoose clearfix">
+		<div class="leftSelect">
+		</div>
+		<div class="rightSelect">
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/citydata.js" ></script>
+	<script type="text/javascript" src="js/Mobile-City-Select.js" ></script>
 	</body>
 </html>
+
+<script type="text/javascript">
+$(function(){
+	mobileCitySelectinit();
+	$('#citySelect').on('click',function(){
+		$(this).toggleClass('active');
+		$("#cityBody").slideToggle();
+	});
+
+})
+</script>

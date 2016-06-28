@@ -1,0 +1,121 @@
+/*----------------------- layout --------------------------*/
+html {
+    font-size : 20px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media only screen and (min-width: 401px){
+    html {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (min-width: 428px){
+    html {
+        font-size: 26.75px !important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 30px !important; 
+    }
+}
+@media only screen and (min-width: 569px){
+    html {
+        font-size: 35px !important; 
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 40px !important; 
+    }
+}
+body {
+	margin: 0;
+	font-family: helvetica;
+}
+h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, button, input, textarea, th, td { margin:0; padding:0; } 
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus{
+	outline: none;
+}
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
+
+
+/*----------------------- 城市选择插件样式 --------------------------*/
+.citySelect{
+	display: block;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #53cdf5;
+	color: #fff;
+	font-size: 0.8rem;
+	text-align: center;
+}
+.citySelect.active{
+	background: #b2e1f1;
+	color: #157fa3;
+}
+.cityChoose{
+	display: none;
+	width: 100%;
+	height: calc(100% - 2rem);
+	height: -moz-calc(100% - 2rem);
+	height: -webkit-calc(100% - 2rem);
+	position: absolute;
+	z-index: 50;
+	top: 2rem;
+	left: 0;
+}
+.cityChoose .leftSelect{
+	float: left;
+	width: 50%;
+	height: 20rem;
+	padding: 0.2rem 0;
+	background: #f2f2f2;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.cityChoose .leftSelect a{
+	display: block;
+	font-size: 0.65rem;
+	color: #666;
+	padding: 0.6rem 1rem;
+	line-height: 1.33rem;
+	background: transparent url(../images/arrowRight_grey.png) no-repeat 95% 50%;
+	background-size: 0.3rem 0.575rem;
+}
+.cityChoose .leftSelect a.active{
+	background: #fff url(../images/arrowRight_grey.png) no-repeat 95% 50%;
+	background-size: 0.3rem 0.575rem;
+}
+.cityChoose .rightSelect{
+	float: right;
+	width: 50%;
+	height: 20rem;
+	padding: 0.2rem 0 0.2rem 1rem;
+	background: #fff;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.cityChoose .rightSelect a{
+	display: block;
+	font-size: 0.65rem;
+	color: #666;
+	padding: 0.6rem 0;
+	line-height: 1.33rem;
+	border-bottom: 1px solid #eee;
+}
+.cityChoose .rightSelect a:last-child{
+	border-bottom: 0;
+}
